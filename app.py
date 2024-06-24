@@ -15,10 +15,10 @@ if hist_button: # al hacer clic en el botón
     st.write('Histograma de los módelos de autos anunciados')
     
     # crear un histograma
-    fig1 = px.histogram(car_data, x="model")
+    fig = px.histogram(car_data, x="model")
 
     # mostrar un gráfico Plotly interactivo
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
 st.header('Precios de autos anunciados')
 
@@ -29,10 +29,10 @@ if scatter_button: # al hacer clic en el botón
     st.write('Gráfico de dispersión de los precios de autos anunciados')
     
     # crear un histograma
-    fig2 = px.scatter(car_data, x="price")
+    fig = px.scatter(car_data, x="price")
 
     # mostrar un gráfico Plotly interactivo
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
 st.header('Selecciona la información para crear un gráfico')
 
@@ -48,10 +48,10 @@ if st.checkbox('Histograma'): # al hacer clic en el botón
     st.write(f'Histograma para {column}')
 
     # crear un histograma
-    fig3 = px.histogram(car_data, x=column)
+    fig = px.histogram(car_data, x=column)
 
     # mostrar un gráfico Plotly interactivo
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
 # checkbox para crear gráfico de dispersión
 if st.checkbox('Gráfico de dispersión'): # al hacer clic en el botón
@@ -59,7 +59,7 @@ if st.checkbox('Gráfico de dispersión'): # al hacer clic en el botón
     st.write(f'Gráfico de dispersión para {column}')
 
     # crear un gráfico de dispersión
-    fig3 = px.scatter(car_data, x=column)
+    fig = px.scatter(car_data, x=column)
 
     # mostrar un gráfico Plotly interactivo
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
