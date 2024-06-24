@@ -1,10 +1,16 @@
+# importar las librerías
 import pandas as pd
 import plotly.express as px
 import streamlit as st
         
 car_data = pd.read_csv('vehicles_us.csv') # leer los datos
 
-st.title('Creación de gráficos con data de anuncios vehiculares')
+st.title('Creación de gráficos con data de anuncios vehiculares') # título de la app
+
+st.write('Esta aplicación permite visualizar gráficos con información de anuncios de autos')
+
+# espacio después de la descripción
+st.markdown("<br>", unsafe_allow_html=True)  # Línea vacía usando HTML
 
 st.header('Modelos de autos anunciados')
         
@@ -20,6 +26,8 @@ if hist_button: # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
 
+st.markdown("<br>", unsafe_allow_html=True)  # Línea vacía usando HTML
+
 st.header('Precios de autos anunciados')
 
 scatter_button = st.button('Construir gráfico de dispersión')
@@ -34,10 +42,14 @@ if scatter_button: # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
 
-st.header('Selecciona la información para crear un gráfico')
+st.markdown("<br>", unsafe_allow_html=True)  # Línea vacía usando HTML
+
+st.header('Lista de variables para graficar')
 
 # selecciona la columna del dataframe para crear el histograma
-column = st.selectbox('Selecciona la variable de interés para el histograma', car_data.columns)
+column = st.selectbox('Selecciona una variable de interés de la lista desplegable', car_data.columns)
+
+st.write("") # línea vacía para espaciar
 
 # mensaje para selección de casilla
 st.write('Selecciona el tipo de gráfico a visualizar')
