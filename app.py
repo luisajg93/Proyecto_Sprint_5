@@ -36,8 +36,8 @@ if scatter_button: # al hacer clic en el botón
     # escribir un mensaje
     st.write('Gráfico de dispersión de los precios de autos anunciados')
     
-    # crear un histograma
-    fig = px.scatter(car_data, x="price")
+    # crear un gráfico de dispersión
+    fig = px.scatter(car_data, x="odometer", y="price")
 
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
