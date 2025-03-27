@@ -1,5 +1,6 @@
 # Proyecto_Sprint_5
-Aplicación web creada como proyecto final del Sprint 5. La aplicación crea gráficos a partir de datos de anuncios de autos.
+Aplicación para visualizar información de venta de autos usados utilizando distintos filtros y tipos de gráfico.
+*Proyecto desarrollado como evaluación final del Sprint Herramientas de desarrollo de software, del bootcamp Data Scientist de TripleTen*
 
 ## Funcionalidad
 La aplicación permite visualizar dos gráficos pre establecidos: un histograma de los modelos de autos anunciados y un gráfico de dispersión para el precio de los mismos.
